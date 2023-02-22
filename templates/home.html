@@ -54,13 +54,7 @@
   </div>
   <h2>Open Positions</h2>
 {% for job in jobs %}
-  <p><strong>ID:</strong> {{ job['id'] }}</p>
-  <p><strong>Title:</strong> {{ job['title'] }}</p>
-  <p><strong>Location:</strong> {{ job['location'] }}</p>
-  {% if 'salary' in job %}
-    <p><strong>Salary:</strong> {{ job['salary'] }}</p>
-  {% endif %}
-  <hr>
+ {% include 'jobitem.html' %}
 {% endfor %}
 <button class="my-button">Contact Us</button>
 </body>

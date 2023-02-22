@@ -1,0 +1,22 @@
+<html>
+<head>
+  <style>
+    .job {
+      border-bottom: 1px solid black;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="job">
+    <p><strong>ID:</strong> {{ job['id'] }}</p>
+    <p><strong>Title:</strong> {{ job['title'] }}</p>
+    <p><strong>Location:</strong> {{ job['location'] }}</p>
+    {% if 'salary' in job %}
+      <p><strong>Salary:</strong> {{ job['salary'] }}</p>
+    {% endif %}
+  </div>
+</body>
+</html>
+
