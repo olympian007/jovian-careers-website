@@ -5,29 +5,41 @@
       border-bottom: 1px solid black;
       padding-bottom: 10px;
       margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .job-details {
+      flex-basis: 70%;
     }
     .apply-button {
       display: inline-block;
       background-color: blue;
       color: white;
-      padding: 10px 20px;
+      padding: 5px 10px;
       border-radius: 5px;
       text-decoration: none;
-      font-size: medium;
+      font-size: small;
+      flex-basis: 25%;
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <div class="job">
-    <p><strong>ID:</strong> {{ job['id'] }}</p>
-    <p><strong>Title:</strong> {{ job['title'] }}</p>
-    <p><strong>Location:</strong> {{ job['location'] }}</p>
-    {% if 'salary' in job %}
-      <p><strong>Salary:</strong> {{ job['salary'] }}</p>
-    {% endif %}
+    <div class="job-details">
+      <p><strong>ID:</strong> {{ job['id'] }}</p>
+      <p><strong>Title:</strong> {{ job['title'] }}</p>
+      <p><strong>Location:</strong> {{ job['location'] }}</p>
+      {% if 'salary' in job %}
+        <p><strong>Salary:</strong> {{ job['salary'] }}</p>
+      {% endif %}
+    </div>
     <a class="apply-button" href="{{ job['apply_url'] }}">Apply Now</a>
   </div>
 </body>
 </html>
+
 
 
