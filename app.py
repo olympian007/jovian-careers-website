@@ -7,7 +7,7 @@ jobs = [
     {'id': 2, 'title': 'engineer', 'location': 'San Francisco', 'salary': 100000},
     {'id': 3, 'title': 'doctor', 'location': 'Los Angeles', 'salary': 150000},
     {'id': 4, 'title': 'lawyer', 'location': 'Chicago', 'salary': 80000},
-    {'id': 5, 'title': 'programmer', 'location': 'Seattle', 'salary': 90000}
+    {'id': 5, 'title': 'programmer', 'location': 'Seattle','salary': 90000},
 ]
 
 @app.route("/")
